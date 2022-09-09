@@ -1,4 +1,5 @@
 package edu.jsu.mcis.cs310;
+import java.lang.Object;
 
 public class Main {
 
@@ -6,9 +7,15 @@ public class Main {
         
         Main m = new Main();
         String message = m.getGreeting();
+        String reverse = m.reverse(message);
+        StringBuilder s = new StringBuilder();
+        s.append(message);
+        
+        
+        
         
         System.out.println(message);
-        System.out.println(m.reverse(message));
+        
         
     }
     
@@ -17,7 +24,12 @@ public class Main {
     }
     
     public String reverse(String message) {
-        return message;
+        StringBuilder s = new StringBuilder();
+        s.append(message);
+        System.out.println(s.reverse());
+        
+        
+        return s.toString();
     }
     
 }
